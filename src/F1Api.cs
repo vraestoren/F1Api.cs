@@ -65,7 +65,6 @@ namespace Formula1Api
         public Task<string> GetCurrentTeams(CancellationToken ct = default)
             => Get("/current/teams", ct);
 
-
         public Task<string> GetCircuits(CancellationToken ct = default)
             => Get("/circuits", ct);
 
