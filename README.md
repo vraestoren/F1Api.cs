@@ -5,16 +5,7 @@ Web-API for [f1api.dev](https://f1api.dev) a free and open source API that provi
 ```cs
 using Formula1Api;
 
-namespace Application
-{
-    internal class Program
-    {
-        static async Task Main()
-        {
-            var api = new F1Api();
-            string drivers = await api.GetDrivers();
-            Console.WriteLine(drivers);
-        }
-    }
-}
+var api = new F1Api(new HttpClient());
+string drivers = await api.GetDrivers();
+Console.WriteLine(drivers);
 ```
